@@ -1,0 +1,37 @@
+@model KursKayit
+<h2>Kurs Güncelleme</h2>
+<hr>
+<form asp-controller="KursKayit" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="KayitId">
+    <div class="mb-3">
+        <label asp-for="KayitId" class="form-label">Kayıt Id</label>
+        <input asp-for="KayitId" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Ogrenci.OgrenciAd" class="form-label">Öğrenci Adı</label>
+        <input asp-for="Ogrenci.OgrenciAd" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Ogrenci.OgrenciSoyad" class="form-label">Öğrenci Soyadı</label>
+        <input asp-for="Ogrenci.OgrenciSoyad" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Ogrenci.Eposta" class="form-label">E-posta</label>
+        <input asp-for="Ogrenci.Eposta" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Ogrenci.Telefon" class="form-label">Telefon</label>
+        <input asp-for="Ogrenci.Telefon" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label asp-for="KayitTarihi" class="form-label">Kayıt Tarihi</label>
+        <input asp-for="KayitTarihi" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+
+
+</form>

@@ -1,0 +1,20 @@
+@model Kurs
+<h2>Kurs Ekle</h2>
+<hr>
+<form asp-controller="Kurs" asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Baslik" class="form-label">Başlık</label>
+        <input asp-for="Baslik" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="OgretmenId">Öğretmen</label>
+        <select class="form-select" asp-items="@ViewBag.Ogretmenler" asp-for="OgretmenId">
+            <option value="">Seçiniz</option>
+        </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-secondary">Kaydet</button>
+
+
+</form>
